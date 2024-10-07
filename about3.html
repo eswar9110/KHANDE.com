@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESWAR - Portfolio</title>
+    <link rel="stylesheet" href="about3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                ESWAR
+            </h1>
+            <ul>
+                <li><a href="main page.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button id="btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section>
+        <div class="s-container">
+            <div class="content">
+                <span class="subtitle">
+                    Hello
+                </span>
+                <h1 class="title">
+                    I'm <span>ESWAR <br></span>a UI/UX Designer
+                </h1>
+                <p class="description">
+                    Welcome to my UI/UX design portfolio! I'm ESWAR, a dedicated and imaginative UI/UX designer with a flair for crafting visually appealing and intuitive user experiences. My journey in design has led me to work on diverse projects, from sleek mobile apps to engaging website interfaces.
+                </p>
+                <div class="buttons">
+                    <a href="mailto:eswarnarayanak@gmail.com">Hire Me</a>
+                    <button>Portfolio</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="PSX_20240929_225448.jpg" alt="pfp">
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const btn= document.getElementById("btn")
+    btn.addEventListener("click", () => {
+        document.querySelector("header ul").classList.toggle("show")
+    })
+</script>
+</html>

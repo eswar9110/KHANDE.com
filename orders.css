@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: #eee;
+}
+
+header{
+    height: 10vh;
+
+}
+
+header nav{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+}
+
+header li a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 3px;
+    
+    position: relative;
+    transition: .1s ease-in;
+}
+
+header li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    border-radius: .1rem;
+    background: rgba(0, 0, 0, 0.882);
+
+    transition: .2s ease-in-out;
+}
+
+header li a:hover::after{
+    width: 100%;
+}
+
+header nav h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+
+    transition: .2s ease-in-out;
+}
+
+header nav h1:hover{
+    letter-spacing: 10px;
+}
+
+header h1 a{
+    all: unset;
+}
+
+/* section  */
+
+section{
+    height: 70vh;
+
+    display: flex;
+}
+
+.s-container{
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.text-container{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text-container h2{
+    font-size: 40px;
+}
+
+.text-container p{
+    color: #474747f4;
+}
+
+.text-container button{
+    all: unset;
+
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid rgba(50, 50, 50, 0.54);
+    padding: 1rem 4rem;
+    color: black;
+
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    position: relative;
+    transition: .2s ease-in-out;
+
+    box-shadow: 5px 5px 0 1px rgba(0, 0, 0, 0.451);
+    overflow: hidden;
+}
+
+.text-container button::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    background: black;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: -1;
+    transform: translate(-100%, 100%);
+
+    transition: .2s ease-in-out;
+}
+
+.text-container button:hover{
+    color: white;
+}
+
+.text-container button:hover::after{
+    width: 100%;
+    transform: translate(0);
+}
+
+.img-container{
+    max-width: 550px;
+}
+
+.img-container img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer div{
+    width: 70px;
+    height: 60px;
+
+    cursor: pointer;
+}
+
+footer img{
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+
+    transition: .2s ease-in-out;
+}
+
+footer div:hover img{
+    transform: translateY(-20px);
+}
+
+/* black  */
+
+body.black *{
+    color: white;
+}
+
+body.black header a::after{
+    background: white;
+}
+
+body.black button:hover{
+    color: black;
+}
+
+body.black button:hover::after{
+    background: white;
+}
+
+/* blue  */
+
+
+body.blue button{
+    background: rgb(30, 48, 239);
+    color: white;
+}
+
+body.blue button:hover{
+    color: black;
+    background: transparent;
+}
+
+body.blue button{
+    border: none;
+}
+
+body.blue button::after{
+    background: white;
+}
+
+body.blue .text-container p{
+    color: rgb(34,34,34);
+}
+
+/* let make it responsive  */
+
+@media only screen and (max-width: 768px){
+    header nav{
+        width: 90%;
+    }
+    header nav ul{
+        gap: 1rem;
+    }
+    header nav h1{
+        font-size: 22px;
+        letter-spacing: 0;
+    }
+    header nav a{
+        font-size: 15px;
+    }
+
+    section{
+        height: fit-content;
+        text-align: center;
+    }
+
+    .s-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-container{
+        width: 100%;
+        margin: 2rem 0;
+        width: 300px;
+    }
+}
+
+@media only screen and ((min-width: 768px) and (max-width: 1150px)){
+    .s-container{
+        width: 90%;
+    }
+    .text-container{
+        width: 50%;
+    }
+    .img-container{
+        width: 50%;
+    }
+    .img-container img{
+        width: 100%;
+    }
+}
